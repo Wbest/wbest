@@ -27,6 +27,7 @@ section:first-of-type {
 
 nav {
   width: 100%;
+  max-width: 1900px;
   height: 60px;
   background-color: #fff;
   position: fixed;
@@ -34,12 +35,16 @@ nav {
   transition-timing-function: swing;
   overflow: hidden; }
   nav.open {
-    height: 300px; }
+    height: 415px; }
   nav ul {
     padding-top: 60px;
-    padding-left: 35px; }
+    padding-left: 60px; }
     nav ul li {
-      list-style: none; }
+      width: calc(100%/5);
+      margin: 1%;
+      display: inline-block;
+      list-style: none;
+      border: 1px solid; }
       nav ul li a {
         padding: 10px 0;
         display: inline-block;
@@ -51,7 +56,7 @@ nav {
   width: 60px;
   height: 60px;
   top: 20px;
-  left: 2%;
+  left: 2.5%;
   transition-duration: 0.5s;
   /*  &.open{
     transition-duration: 1s;
