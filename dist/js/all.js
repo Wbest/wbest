@@ -1,16 +1,105 @@
-   $(window).scroll(function() {
 
-    if ($(this).scrollTop()>0)
-     {
-        $('.start-page').slideUp(1000);
-        $('.content-header').css('background-attachment', 'fixed');
-     }
-    else
-     {
-      $('.start-page').slideDown(1000);
-     }
- });
 
+// form-contacts
+$(document).ready(function() {
+
+  $('input').each(function() {
+
+    $(this).on('focus', function() {
+      $(this).parent('.label-effect').addClass('active');
+    });
+
+    $(this).on('blur', function() {
+      if ($(this).val().length == 0) {
+        $(this).parent('.label-effect').removeClass('active');
+      }
+    });
+
+    if ($(this).val() != '') $(this).parent('.label-effect').addClass('active');
+
+  });
+
+});
+
+$(document).ready(function() {
+
+  $('textarea').each(function() {
+
+    $(this).on('focus', function() {
+      $(this).parent('.label-effect-1').addClass('active');
+    });
+
+    $(this).on('blur', function() {
+      if ($(this).val().length == 0) {
+        $(this).parent('.label-effect-1').removeClass('active');
+      }
+    });
+
+    if ($(this).val() != '') $(this).parent('.label-effect-1').addClass('active');
+
+  });
+
+});
+        
+ //    var start = $('.start-page').offset().top, second = $('.second-section').offset().top, w = $(window);
+ //    var scroll = w.scrollTop(), outerHeight = $('.start-page').outerHeight(),outerHeightSecond = $('.second-section').outerHeight();
+    
+ //    console.log("scroll"+"-"+scroll);console.log("second"+"-"+second);console.log("outerHeight"+"-"+outerHeight);
+ //    console.log("outerHeightSecond"+"-"+outerHeightSecond);
+    
+ //    // if (scroll===100)
+ //    //     {   
+ //    //         $('html,body').animate({
+ //    //         scrollTop: second+100
+ //    //         }, 2000).disablescroll();
+ //    //     }
+
+ //    //         if(second<scroll)
+ //    //             {
+ //    //                 $('html,body').disablescroll("undo");
+ //    //             }
+
+ //    //                 if(second===scroll)
+ //    //                 {
+ //    //                    $('html,body').animate({
+ //    //                    scrollTop: start
+ //    //                   }, 2000).disablescroll();  
+ //    //                 }
+
+ //    //                     if(start===scroll)
+ //    //                         {
+ //    //                            $('html,body').disablescroll("undo"); 
+ //    //                         }  
+
+ //    if (scroll>0 || scroll===second)
+ //        {  
+ //            $('.start-page').slideUp(1000).disablescroll();
+ //            $('.content-header').css('background-attachment', 'fixed');
+ //        }
+
+ //        if(scroll>=second){
+ //           $('html,body').disablescroll("undo");  
+ //        }
+
+
+ //        if (scroll===0)
+ //        {  
+ //            $('.start-page').slideDown(600).disablescroll("undo");
+ //        }
+ //    //    if (second===scroll)
+ //    //     {      
+ //    //           $('.start-page').bind("mousewheel", function() {
+ //    //             return false;
+ //    //             });
+
+ //    //           $('html,body').animate({
+ //    //            scrollTop: start
+ //    //           }, 2000)
+ //    //     //       
+ //    //     }  
+
+ // });
+    
             $(document).ready(function() {
               $('.owl-carousel').owlCarousel({
                 loop: true,
@@ -45,25 +134,88 @@ $("a").click(function(){
       $(".nav-place-menu").toggleClass("transform");
 });
 
-/*!
- * jquery.parallaxmouse
- * 
- * @author Wil Neeley <william.neeley@gmail.com> (https://github.com/Xaxis)
- * @version 1.0.0
- * @license MIT
- */
-!function(a,b,c,d){"use strict";function e(b,c){this._name=f,this._defaults=g,this.element=b,this.options=a.extend({},g,c),this.init()}var f="parallaxmouse",g={range:100,elms:[],invert:!1};a.extend(e.prototype,{init:function(){this.element=a(this.element),this.setInitialPositions(this.options.elms),this.parallaxElms(this.options.elms)},setInitialPositions:function(){a(this.options.elms).each(function(a,b){var c=b.el.position();b.el.hasClass("left")?(b.x=c.left,b.left=!0):(b.x=parseInt(b.el.css("right").replace("px")),b.left=!1),b.el.hasClass("top")?(b.y=c.top,b.top=!0):(b.y=parseInt(b.el.css("bottom").replace("px")),b.top=!1)})},parallaxElms:function(){var b=this;this.element.on("mousemove",function(c){var d=b.element.outerWidth(),e=b.element.outerHeight(),f=c.clientX,g=c.clientY,h=f/d,i=g/e;a(b.options.elms).each(function(a,c){var d=b.options.invert,e=b.options.range*h,f=b.options.range*i,g=d?c.x+e:c.x-e,j=d?c.y+f:c.y-f,k=g*c.rate,l=j*c.rate;c.left?c.el.css("left",c.x+-1*k):c.el.css("right",c.x+k),c.top?c.el.css("top",c.y+-1*l):c.el.css("bottom",c.y+l)})})}}),a.fn[f]=function(b){return this.each(function(){a.data(this,"plugin_"+f)||a.data(this,"plugin_"+f,new e(this,b))})}}(jQuery,window,document);
 
-jQuery(window).parallaxmouse({
-    invert: true,
-    range: 400,
-    elms: [
-        {el: $('#layer-1'), rate: 0.2},
-        {el: $('#layer-2'), rate: 0.2},
-        {el: $('#layer-3'), rate: 0.2},
-        {el: $('#layer-4'), rate: 0.2}
-    ]
-});
+        var counter = 0,
+        total   = $( 'li' ).length, // total of items
+        show    = 4, // how many items are showed
+        result  = total - show;
+
+    $( '#prev' ).on( 'click', function(){
+        if( counter === 0 ) {
+          return false;
+        }
+        counter--;
+        $( 'ul' ).animate({
+          top: '+=110'},
+        500 );
+    });
+
+    $( '#next' ).on( 'click', function(){
+      if( counter === result ) {
+          return false;
+        }
+        counter++;
+        $( 'ul' ).animate({
+          top: '-=110'},
+        500 );
+    });
+
+
+$(".team-block-photo-1").hover(function() {
+  $(".mask-photo-1").css("background", "transparent");
+}, 
+  function () {
+  $(".mask-photo-1").css("background", "rgba(55,170,255,0.7)"); 
+  }
+);
+
+$(".team-block-photo-2").hover(function() {
+  $(".mask-photo-2").css("background", "transparent");
+}, 
+  function () {
+  $(".mask-photo-2").css("background", "rgba(55,170,255,0.7)"); 
+  }
+);
+
+$(".team-block-photo-3").hover(function() {
+  $(".mask-photo-3").css("background", "transparent");
+}, 
+  function () {
+  $(".mask-photo-3").css("background", "rgba(55,170,255,0.7)"); 
+  }
+);
+
+$(".team-block-photo-4").hover(function() {
+  $(".mask-photo-4").css("background", "transparent");
+}, 
+  function () {
+  $(".mask-photo-4").css("background", "rgba(55,170,255,0.7)"); 
+  }
+);
+
+$(".team-block-photo-5").hover(function() {
+  $(".mask-photo-5").css("background", "transparent");
+}, 
+  function () {
+  $(".mask-photo-5").css("background", "rgba(55,170,255,0.7)"); 
+  }
+);
+
+$(".team-block-photo-6").hover(function() {
+  $(".mask-photo-6").css("background", "transparent");
+}, 
+  function () {
+  $(".mask-photo-6").css("background", "rgba(55,170,255,0.7)"); 
+  }
+);
+
+$(".team-block-photo-7").hover(function() {
+  $(".mask-photo-7").css("background", "transparent");
+}, 
+  function () {
+  $(".mask-photo-7").css("background", "rgba(55,170,255,0.7)"); 
+  }
+);
 
 
 $("#footer-big-button-1").hover(
@@ -95,3 +247,4 @@ $("#footer-big-button-3").hover(
       $(".icon-3").css("color", "#fff");  
   }
 );
+

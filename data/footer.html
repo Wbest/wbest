@@ -1,68 +1,80 @@
 	<!-- Footer начало -->
-			<footer class="footer-container">
+			
+				<!-- <div class="page-mask"></div> --> <!-- PHP условие -->
 
-				<div class="footer-wrap-big-buttons">
+					<div class="footer-container footer-wrap-big-buttons">
 
-					<div id="footer-big-button-1" class="footer-big-button">
-						<span class="icon-1"></span>
-						<a href="#">Обсудить проект</a>
+						<div id="footer-big-button-1" class="footer-big-button">
+							<span class="icon-1"></span>
+							<a href="#">Обсудить проект</a>
 
-						<p>Изложите свои задачи и идеи, а мы расскажем, как сможем решить их.</p>
+							<p>Изложите свои задачи и идеи, а мы расскажем, как сможем решить их.</p>
+						</div>
+						<div id="footer-big-button-2" class="footer-big-button">
+							<span class="icon-3"></span>
+							<a href="#">Заказать аудит</a>
+
+							<p>Бесплатно одготовим аудит присутствия вашего бренда в digital-среде и дадим ряд полезных рекомендаций.</p>
+						</div>
+
+						<div id="footer-big-button-3" class="footer-big-button">
+							<span class="icon-2"></span>
+							<a href="#">Поинтересоваться</a>
+
+							<p>Если у Вас есть вопросы, мы ответим на них в течении часа.</p>
+						</div>
+
+						<div style="clear:both;"></div>
+
 					</div>
-					<div id="footer-big-button-2" class="footer-big-button">
-						<span class="icon-3"></span>
-						<a href="#">Заказать аудит</a>
+			</div>
+	<!-- </div> -->
+				<footer>
+					<div class="footer-below">
+						<div class="footer-below-container">
 
-						<p>Бесплатно одготовим аудит присутствия вашего бренда в digital-среде и дадим ряд полезных рекомендаций.</p>
+							<img src="../dist/img/footer-logo.png" class="wbest" alt="Логотип">				
+							
+							<span style="padding-left:20%;">Copyright © 2015    ООО "Вэбест"    ИНН 3528217800</span>
+
+
+								<div class="footer-social-buttons">
+									<span class="icon-7"></span>
+								</div>
+								<div class="footer-social-buttons">
+									<span class="icon-6"></span>
+								</div>						
+								<div class="footer-social-buttons">
+									<span class="icon-5"></span>
+								</div>
+								<div class="footer-social-buttons">
+									<span class="icon-4"></span>
+								</div>
+
+						</div>
 					</div>
-
-					<div id="footer-big-button-3" class="footer-big-button">
-						<span class="icon-2"></span>
-						<a href="#">Поинтересоваться</a>
-
-						<p>Если у Вас есть вопросы, мы ответим на них в течении часа.</p>
-					</div>
-
-					<div style="clear:both;"></div>
-
-				</div>
-				
-				<div style="height:65px; padding:25px 4px 0 0;">
-					<a href="http://wbest.ru" target="_blank">
-						<div class="wbest">
-							Разработано <span>Webest media</span>
-							<img src="../dist/img/footer-logo.png" height="33" width="138" alt="wbest" data-pin-nopin="true">
-						</div>
-					</a>				
-					
-					<span style="padding-left:20%;">Copyright © 2015    ООО "Вэбест"    ИНН 3528217800</span>
-
-
-						<div class="footer-social-buttons">
-							<span class="icon-7"></span>
-						</div>
-						<div class="footer-social-buttons">
-							<span class="icon-6"></span>
-						</div>						
-						<div class="footer-social-buttons">
-							<span class="icon-5"></span>
-						</div>
-						<div class="footer-social-buttons">
-							<span class="icon-4"></span>
-						</div>
-
-
-				</div>
-			</footer>
-	<!-- Footer конец --> 
-	
-	</div>
+				</footer>
+	<!-- Footer конец --> 			
 	<!-- Подключенные скрипты -->
-		
         <script src="../dist/js/jquery.min.js"></script>
-        <script src="../dist/js/owl.carousel.min.js"></script>
 		<script src="../dist/js/all.js"></script>
 
+		<!-- О нас -->
+		<script src="../dist/js/modernizr.custom.grid.js"></script>
+		<script src="../dist/js/jquery.hoverdir.js"></script>
+
+		<script>
+			$(function() {
+    		$(' .team-list > li').each( function() { $(this).hoverdir({hoverDelay : 75}); } );
+			});
+		</script>
+		<!-- О нас -->
+
+		<!-- главная страница -->
+		<script src="../dist/js/owl.carousel.min.js"></script>
+		<script src="../dist/js/parallaxmouse.js"></script>
+		<!-- главная страница -->
+		
 			<? echo $scriptOrg;?>
 			
 </body>

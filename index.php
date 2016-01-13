@@ -12,7 +12,7 @@
 
 
 		<!-- Content начало -->
-		<main>
+		<main class="page-main">
 			<section class="start-page">
 				<div class="content-header">
 					<div class="content-header-mask"></div>	
