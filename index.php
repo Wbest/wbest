@@ -10,7 +10,7 @@
 	include $_SERVER['DOCUMENT_ROOT']."/data/header.html";
 ?>
 
-
+sadfasdfasdf
 		<!-- Content начало -->
 		<main class="page-main">
 			<section class="start-page">
