@@ -4,7 +4,8 @@
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
     <title><? echo $title;?></title>
-	
+    
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta content="<? echo $description;?>" name="description">
 	<meta content="<? echo $keywords;?>" name="keywords">
     <!-- Все стили -->
@@ -22,14 +23,12 @@
 </head>
 <body>
 
-    <!-- Header начало -->
-	<header>
-		<!-- Навигация -->
-		<nav>
+	<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "") {?>
+	<div id="container" class="intro-effect-push">
+	<nav>
 		  <div class="navToggle"> 
 		    <a class="navicon-button uarr">
 		      <div class="navicon"></div>
-		      <span class="nav-place-menu">Меню</span>
 		    </a>  
 		  </div>
 		  	<div class="nav-contact">
@@ -59,23 +58,92 @@
 			    </li>
 			    <li>
 			    	<a href="/projects/"><span class="menu-icon-item item-portfolio"></span></a>
-				    <a href="/projects/" class="item-portfolio-text">Портфолио</a>
+				    <a href="/projects/" class="item-portfolio-text uarr">Портфолио</a>
 			    </li>
 			    <li>
 			    	<a href="/blog/"><span class="menu-icon-item item-blog"></span></a>
-				    <a href="/blog/" class="item-blog-text">Блог</a>
+				    <a href="/blog/" class="item-blog-text uarr">Блог</a>
 			    </li>
 			    <li>
-			    	<a href="#"><span class="menu-icon-item item-discuss"></span></a>
-				    <a href="#" class="item-discuss-text">Обсудить проект</a>
+			    	<a href="#" class="uarr"><span class="menu-icon-item item-discuss"></span></a>
+				    <a href="#" class="item-discuss-text uarr">Обсудить проект</a>
 			    </li>
 			  </ul>
-
-
 		</nav>
+	<? } ?>	
+    
+    <!-- Header начало -->
 
+	<header class="header">
+		<!-- Навигация -->
+		<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "") {?>
+		<div class="container-start-page">
+		<section class="start-page">
+
+				<div class="content-header">
+					<div class="content-header-mask"></div>	
+						<div class="content">
+							<img src="dist/img/logo1.png" alt="Лого" class="logo-1">
+								<div class="content-header-text">
+									<h1>Разработка корпоративных сайтов для компаний в сфере<br>
+									услуг и производства, с акцентом на продвижение в поисковых системах</h1>
+								</div>
+									<div class="block-button">
+										<div class="group-button button-icon"><span class="icon-1"></span></div>
+										<a class="group-button button-discussion" href="#">Обсудить проект</a>
+									</div>
+						</div>		
+				</div>
+
+		</section>
+		</div>
+		<? } else {?>
+		<nav>
+		  <div class="navToggle"> 
+		    <a class="navicon-button uarr">
+		      <div class="navicon"></div>
+		    </a>  
+		  </div>
+		  	<div class="nav-contact">
+  		  		<a rel="nofollow" style="text-decoration:none;" href="tel:+78202-74-22-90">+7 (8202) 742 290</a>
+  		  		<a rel="nofollow" style="text-decoration:none;" href="mailto:info@wbest.ru">info@wbest.ru</a>
+  		  	</div> 
+			  <ul class="header-nav">
+			    <li>
+			    	<a href="/dev/"><span class="menu-icon-item sites-mobiles"></span></a>
+			    	<a href="/dev/" class="sites-mobiles-text">Разработка сайтов и мобильных приложений</a>
+			    </li>
+			    <li>
+			    	<a href="/"><span class="menu-icon-item item-main"></span></a>
+			    	<a href="/" class="item-main-text"></span>Главная</a>
+			    </li>
+			    <li>
+			    	<a href="/about/"><span class="menu-icon-item item-about"></span></a>
+			    	<a href="/about/" class="item-about-text">О нас</a>
+			    </li>
+			    <li>
+			    	<a href="/contacts/"><span class="menu-icon-item item-contacts"></span></a>
+				    <a href="/contacts/" class="item-contacts-text">Контакты</a>
+			    </li>
+			    <li>
+			    	<a href="/seo/"><span class="menu-icon-item complex-seo"></span></a>
+				    <a href="/seo/" class="complex-seo-text">Комплексное продвижение в интернете</a>
+			    </li>
+			    <li>
+			    	<a href="/projects/"><span class="menu-icon-item item-portfolio"></span></a>
+				    <a href="/projects/" class="item-portfolio-text uarr">Портфолио</a>
+			    </li>
+			    <li>
+			    	<a href="/blog/"><span class="menu-icon-item item-blog"></span></a>
+				    <a href="/blog/" class="item-blog-text uarr">Блог</a>
+			    </li>
+			    <li>
+			    	<a href="#" class="uarr"><span class="menu-icon-item item-discuss"></span></a>
+				    <a href="#" class="item-discuss-text uarr">Обсудить проект</a>
+			    </li>
+			  </ul>
+		</nav>
+		<?}?>	
 	</header>
-	
-	<div class="contain">
-			<!-- <div class="fon-page">   -->
 	<!-- Header конец -->
+	<div <?if ((str_replace("/", "", $_SERVER['REQUEST_URI']) == "contacts")||(str_replace("/", "", $_SERVER['REQUEST_URI']) == "dev")) {?>class="contain fon-page"<?}else{?>class="contain"<?}?>>

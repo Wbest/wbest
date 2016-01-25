@@ -1,9 +1,339 @@
+var form1 = $('#discuss-form'), form2 = $('#audit-form'),el = $(".anim-red");
+$(document).ready(function () {
+    
+    $(form2).validate({
+        rules:{
+          name:{required:true},
+          email:{required:true},
+          tel:{required:true},
+          company:{required:true},
+          url:{required:true},
+        },
+        highlight: function(element) {
+            $(element).addClass("erroR");  
+        },
+        unhighlight: function(element) {
+            $(element).removeClass("erroR");
+        }
+    });
 
+  $(form1).validate({
+        rules:{
+          name:{required:true},
+          email:{required:true},
+          tel:{required:true},
+          company:{required:true},
+          url:{required:true},
+          budget:{required:true}
+        },
+        highlight: function(element) {
+            $(element).addClass("erroR");  
+        },
+        unhighlight: function(element) {
+            $(element).removeClass("erroR");
+        }
+    });
+});
+
+$(".right-text-forward").click(function(){
+        var lengthTel = $('#tel').val().length, myURL = 'http://www.' + $('#url').val();
+       if((!!form1.valid())&&(lengthTel>5)){
+       $('#tel').removeClass("erroR");
+       //Форма 
+       $(".form-part-1").fadeOut(0);
+       $(".form-part-2").fadeIn(1000);
+       // url
+       $('#url').val(myURL);
+       $('.url').addClass("active");
+       // Пагинатор
+       $(".one").removeClass("active");
+       $(".two").addClass("active");
+       // Текст
+       $(".discuss-header-text").empty();
+       $(".discuss-header-text").append( "<p>Укажите название вашей компании и адрес веб-сайта, если он есть.</p>" );
+       // Кнопка
+       $(".right-text-forward").css("display","none");
+       $(".right-text-forward-2").css("display","block"); 
+       $(".left-text-forward").css("display","block");
+       $(".left-button-forward").fadeIn(1000); 
+     }else if(lengthTel<5){
+      $('#tel').addClass("erroR");
+     }
+});
+
+// Вторая форма. НАЧАЛО.
+
+// Первая кнопка "Далее". Начало.
+$(".right-text-forward-5").click(function(){
+       var lengthTel = $('#audit-tel').val().length, myURL = 'http://www.' + $('#audit-url').val();
+       if((!!form2.valid())&&(lengthTel>5)){
+       console.log("click");
+       $('#audit-tel').removeClass("erroR");
+       //Форма 
+       $(".form-audit-part-1").fadeOut(0);
+       $(".form-audit-part-2").fadeIn(1000);
+       // url
+       $('#audit-url').val(myURL);
+       $('.url').addClass("active");
+       // Пагинатор
+       $(".one").removeClass("active");
+       $(".two").addClass("active");
+       // Текст
+       $(".audit-header-text").empty();
+       $(".audit-header-text").append( "<p>Укажите название вашей компании и адрес веб-сайта, если он есть.</p>" );
+       // Кнопка
+       $(".right-text-forward-5").css("display","none");
+       $(".right-text-forward-6").css("display","block"); 
+       $(".left-text-forward-4").css("display","block");
+       $(".left-button-forward").fadeIn(1000); 
+     }else if(lengthTel<5){
+      $('#audit-tel').addClass("erroR");
+     }
+});
+// Первая кнопка "Далее". Аудит. Конец.
+
+// Кнопка назад. Аудит. Начало.
+$(".left-text-forward-4").click(function(){
+       //Форма 
+       $(".form-audit-part-2").fadeOut(0);
+       $(".form-audit-part-1").fadeIn(1000);
+       // Пагинатор
+       $(".two").removeClass("active");
+       $(".one").addClass("active");
+       // Текст
+       $(".audit-header-text").empty();
+       $(".audit-header-text").append( "<p>Расскажите о своем проекте или задачах.</p><p>Для начала укажите свои контактные данные.</p>" );
+       // Кнопки
+       // Правая
+       $(".right-text-forward-6").css("display","none");
+       $(".right-text-forward-5").css("display","block"); 
+       // Левая
+       $(".left-button-forward-4").fadeOut(0);
+       //Input url
+       $("#audit-url").val(""); 
+});
+// Кнопка назад. Аудит. Конец.
+
+        // Кнопка submit. Аудит. Начало.
+        $('#audit-form').submit(function() {
+          if(!!form2.valid()){
+            $(".form-audit-part-2").fadeOut(0);
+            $(".audit-block-controls").fadeOut(0);
+            $(".right-text-forward-6").css("display","none");
+            $(".left-text-forward-4").css("display","none");
+            $(".audit-header-text").empty();
+            $(".audit-header-text").append( 
+              "<p class='text-thank'>Спасибо, что обратились к нам!</p>"+ 
+               "<p class='text-thank'>Мы свяжемся с Вами в течении нескольких"+  
+               "<p class='text-thank'>наносекунд.</p>"+
+               "<br>"+
+               "<p class='text-thank'>С уважением,</p>"+
+               "<p class='text-thank'>команда Webest</p>"
+              );
+            return false;
+          }
+        });
+        // Кнопка submit. Аудит. Конец.
+
+// Вторая форма. КОНЕЦ.
+
+  $(".left-text-forward").click(function(){
+       //Форма 
+       $(".form-part-2").fadeOut(0);
+       $(".form-part-1").fadeIn(1000);
+       // Пагинатор
+       $(".two").removeClass("active");
+       $(".one").addClass("active");
+       // Текст
+       $(".discuss-header-text").empty();
+       $(".discuss-header-text").append( "<p>Расскажите о своем проекте или задачах.</p><p>Для начала укажите свои контактные данные.</p>" );
+       // Кнопки
+       // Правая
+       $(".right-text-forward-2").css("display","none");
+       $(".right-text-forward").css("display","block"); 
+       // Левая
+       $(".left-button-forward").fadeOut(0);
+       //Input url
+       $("#url").val(""); 
+});
+
+  $(".right-text-forward-2").click(function(){
+      if(!!form1.valid()){
+      //Форма 
+      $(".form-part-2").fadeOut(0);
+      $(".form-part-3").fadeIn(1000);
+      // Пагинатор
+      $(".two").removeClass("active");
+      $(".tree").addClass("active");
+      // Текст
+      $(".discuss-header-text").empty();
+      $(".discuss-header-text").append( "<p>Что вас интересует?</p>" );
+      // Кнопки
+      // Правая
+      $(".right-text-forward-2").css("display","none");
+      $(".right-text-forward-3").css("display","block"); 
+      // Левая
+      $(".left-text-forward").css("display","none");  
+      $(".left-text-forward-2").css("display","block"); 
+     }
+  });
+
+    $(".left-text-forward-2").click(function(){
+      $(".form-part-3").fadeOut(0);
+      $(".form-part-2").fadeIn(1000);
+      // Пагинатор
+      $(".tree").removeClass("active");
+      $(".two").addClass("active");
+      // Текст
+      $(".discuss-header-text").empty();
+      $(".discuss-header-text").append( "<p>Укажите название вашей компании и адрес веб-сайта, если он есть.</p>" );
+      // Кнопки
+      // Правая
+      $(".right-text-forward-3").css("display","none");
+      $(".right-text-forward-2").css("display","block"); 
+      // Левая
+      $(".left-text-forward-2").css("display","none");  
+      $(".left-text-forward").css("display","block"); 
+     });
+
+    // Выбранный интерес
+    $("input.select:radio").change(function(){
+      if ( this.value == 'dev-site') {
+          $('.dev-site').addClass("check");
+      }else{
+          $('.dev-site').removeClass("check");
+      }
+
+      if ( this.value == 'mobile-app') {
+          $('.mobile-app').addClass("check");
+      }else{
+          $('.mobile-app').removeClass("check"); 
+      }
+
+      if ( this.value == 'advance') {
+          $('.advance').addClass("check");
+      }else{
+          $('.advance').removeClass("check");
+      }
+
+      if ( this.value == 'another') {
+          $('.another').addClass("check");
+      }else{
+          $('.another').removeClass("check");
+      }
+    });
+
+    // Предпоследняя кнопка "Далее"
+    $(".right-text-forward-3").click(function(){
+      if ( !$("input").is(':checked') ){
+          el.addClass("blink");
+          setTimeout(function(){
+          el.removeClass("blink");
+          }, 2000);
+      }else
+
+      if(!!form1.valid()){
+      //Форма 
+      $(".form-part-3").fadeOut(0);
+      $(".form-part-4").fadeIn(1000);
+      $(".discuss-block-form").css("margin-bottom","0");
+      // Пагинатор
+      $(".tree").removeClass("active");
+      $(".four").addClass("active");
+      // Текст
+      $(".discuss-header-text").empty();
+      $(".discuss-header-text").append( "<p>Укажите примерный бюджет, а так же вы можете указать детали проекта и прикрепить документ.</p>" );
+      // Кнопки
+      // Правая
+      $(".right-text-forward-3").css("display","none");
+      $(".right-text-forward-4").css("display","block");
+      // Левая
+      $(".left-text-forward-2").css("display","none");  
+      $(".left-text-forward-3").css("display","block");
+     }
+  });
+        // Кнопка назад. Последняя.
+        $(".left-text-forward-3").click(function(){
+        //Форма 
+        $(".form-part-4").fadeOut(0);
+        $(".form-part-3").fadeIn(1000);
+        $(".discuss-block-form").css("margin-bottom","100px");
+        // Пагинатор
+        $(".four").removeClass("active");
+        $(".tree").addClass("active");
+        // Текст
+        $(".discuss-header-text").empty();
+        $(".discuss-header-text").append( "<p>Что вас интересует?</p>" );
+        // Кнопки
+        // Правая
+        $(".right-text-forward-3").css("display","block");
+        $(".right-text-forward-4").css("display","none");
+        // Левая
+        $(".left-text-forward-3").css("display","none");  
+        $(".left-text-forward-2").css("display","block");
+        });
+
+        var deleteId = 0;
+        $('#fileupload').click(function(){
+          deleteId = ++deleteId;
+          if((($(".attach-block-file").length)==1)){
+            $(".block-attach").css("position","absolute");
+            $(".block-attach").css("bottom","-2px");
+          };
+        });
+
+        $('#fileupload').on('change', function (event, files, label) {
+          var file_name = this.value.replace(/\\/g, '/').replace(/.*\//, '');
+          x = document.getElementById("fileupload");
+          for (var i = 0; i < x.files.length; i++) {
+            $('.file-list').append("<div id='"+deleteId+"' class='attach-block-file'><span id='"+deleteId+"' class='close-document'>x</span>"+ x.files[i].name +"</div>");
+          }
+        });
+
+        $('#discuss-form').submit(function() {
+          if(!!form1.valid()){
+            $(".form-part-4").fadeOut(0);
+            $(".discuss-block-controls").fadeOut(0);
+            $(".right-text-forward-4").css("display","none");
+            $(".left-text-forward-3").css("display","none");
+            $(".discuss-header-text").empty();
+            $(".discuss-header-text").append( 
+              "<p class='text-thank'>Спасибо, что обратились к нам!</p>"+ 
+               "<p class='text-thank'>Мы свяжемся с Вами в течении нескольких"+  
+               "<p class='text-thank'>наносекунд.</p>"+
+               "<br>"+
+               "<p class='text-thank'>С уважением,</p>"+
+               "<p class='text-thank'>команда Webest</p>"
+              );
+            return false;
+          }
+        });
+
+$(".uarr").click(function(){
+  $(this).toggleClass("opened");
+    $("nav").toggleClass("open");
+});
 
 // form-contacts
 $(document).ready(function() {
 
   $('input').each(function() {
+
+    $(this).on('focus', function() {
+      $(this).parent('.label-effect').addClass('active');
+    });
+
+    $(this).on('blur', function() {
+      if ($(this).val().length == 0) {
+        $(this).parent('.label-effect').removeClass('active');
+      }
+    });
+
+    if ($(this).val() != '') $(this).parent('.label-effect').addClass('active');
+
+  });
+
+    $('textarea').each(function() {
 
     $(this).on('focus', function() {
       $(this).parent('.label-effect').addClass('active');
@@ -40,66 +370,27 @@ $(document).ready(function() {
   });
 
 });
+
+$(document).ready(function() {
+
+  $('input').each(function() {
+
+    $(this).on('focus', function() {
+      $(this).parent('.half-label-effect').addClass('active');
+    });
+
+    $(this).on('blur', function() {
+      if ($(this).val().length == 0) {
+        $(this).parent('.half-label-effect').removeClass('active');
+      }
+    });
+
+    if ($(this).val() != '') $(this).parent('.half-label-effect').addClass('active');
+
+  });
+
+});
         
- //    var start = $('.start-page').offset().top, second = $('.second-section').offset().top, w = $(window);
- //    var scroll = w.scrollTop(), outerHeight = $('.start-page').outerHeight(),outerHeightSecond = $('.second-section').outerHeight();
-    
- //    console.log("scroll"+"-"+scroll);console.log("second"+"-"+second);console.log("outerHeight"+"-"+outerHeight);
- //    console.log("outerHeightSecond"+"-"+outerHeightSecond);
-    
- //    // if (scroll===100)
- //    //     {   
- //    //         $('html,body').animate({
- //    //         scrollTop: second+100
- //    //         }, 2000).disablescroll();
- //    //     }
-
- //    //         if(second<scroll)
- //    //             {
- //    //                 $('html,body').disablescroll("undo");
- //    //             }
-
- //    //                 if(second===scroll)
- //    //                 {
- //    //                    $('html,body').animate({
- //    //                    scrollTop: start
- //    //                   }, 2000).disablescroll();  
- //    //                 }
-
- //    //                     if(start===scroll)
- //    //                         {
- //    //                            $('html,body').disablescroll("undo"); 
- //    //                         }  
-
- //    if (scroll>0 || scroll===second)
- //        {  
- //            $('.start-page').slideUp(1000).disablescroll();
- //            $('.content-header').css('background-attachment', 'fixed');
- //        }
-
- //        if(scroll>=second){
- //           $('html,body').disablescroll("undo");  
- //        }
-
-
- //        if (scroll===0)
- //        {  
- //            $('.start-page').slideDown(600).disablescroll("undo");
- //        }
- //    //    if (second===scroll)
- //    //     {      
- //    //           $('.start-page').bind("mousewheel", function() {
- //    //             return false;
- //    //             });
-
- //    //           $('html,body').animate({
- //    //            scrollTop: start
- //    //           }, 2000)
- //    //     //       
- //    //     }  
-
- // });
-    
             $(document).ready(function() {
               $('.owl-carousel').owlCarousel({
                 loop: true,
@@ -128,11 +419,7 @@ $(document).ready(function() {
               })
             })
 
-$("a").click(function(){
-  $(this).toggleClass("opened");
-    $("nav").toggleClass("open");
-      $(".nav-place-menu").toggleClass("transform");
-});
+
 
 
         var counter = 0,

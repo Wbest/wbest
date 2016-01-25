@@ -1,7 +1,7 @@
 	<!-- Footer начало -->
-			
-				<!-- <div class="page-mask"></div> --> <!-- PHP условие -->
-
+				<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "contacts") {?>
+				<div class="page-mask"></div> 
+				<?}?>	
 					<div class="footer-container footer-wrap-big-buttons">
 
 						<div id="footer-big-button-1" class="footer-big-button">
@@ -12,7 +12,7 @@
 						</div>
 						<div id="footer-big-button-2" class="footer-big-button">
 							<span class="icon-3"></span>
-							<a href="#">Заказать аудит</a>
+							<a href="#" class="audit-launch">Заказать аудит</a>
 
 							<p>Бесплатно одготовим аудит присутствия вашего бренда в digital-среде и дадим ряд полезных рекомендаций.</p>
 						</div>
@@ -28,7 +28,8 @@
 
 					</div>
 			</div>
-	<!-- </div> -->
+
+				<!-- Footer. Нижняя полоса. Начало. -->
 				<footer>
 					<div class="footer-below">
 						<div class="footer-below-container">
@@ -54,13 +55,469 @@
 						</div>
 					</div>
 				</footer>
+				<!-- Footer. Нижняя полоса. Конец. -->
+
+		<!-- Модальное окно. Обсуждения. Начало. -->
+		<div id="fullscreen">
+			
+			<div class="discuss-container">
+				<!-- Блок-header, содержащий заголовок и тексты. Начало -->
+				<div class="discuss-block-header">
+					<a href="#" class="close"><span class="closed rounded heavy"></span></a>
+			
+					<header>
+						<h2>Обсудить проект</h2>
+					</header>
+
+						<div class="discuss-header-text">
+							<p>Расскажите о своем проекте или задачах.</p>
+							<p>Для начала укажите свои контактные данные.</p>
+						</div>
+					<div style="clear:both"></div>
+				</div>
+				<!-- Блок-header, содержащий заголовок и тексты. Конец -->
+
+				<!-- Блок с формами. Начало -->
+				<div class="discuss-block-form">
+					<form id="discuss-form" action="#" method="post">
+						<!-- Первая форма. Начало. -->
+						<div class="form-part-1">				
+							<div class="label-effect">
+								<label for="name">Ваше имя</label>
+								<input id="name" class="formname" type="text" name="name" autocomplete="on">
+							</div>
+											
+							<div class="half-label-effect left-label">
+								<label for="mail">Email</label>
+								<input id="mail" class="form-mail" type="email" name="email" autocomplete="on">
+							</div>
+
+							<div class="half-label-effect">
+								<label for="tel">Телефон</label>
+								<input id="tel" class="form-tel" type="number" name="tel" autocomplete="on">
+							</div>
+						</div>
+						<!-- Первая форма. Конец. -->
+
+						<!-- Вторая форма. Начало. -->
+						<div class="form-part-2">
+							<div class="label-effect">
+								<label for="company">Название компании</label>
+								<input id="company" type="text" name="company" class="formcompany" autocomplete="on">
+							</div>
+							<div class="label-effect url">
+								<label for="url">Адрес сайта (если есть)</label>
+								<input id="url" type="text" name="url" data-validation="url" class="formurl">
+							</div>
+						</div>
+						<!-- Вторая форма. Конец. -->
+
+						<!-- Третья форма. Начало -->
+						<div class="form-part-3">
+							<div class="block-interest padding-dev-site">
+								<input id="dev-site" class="select" name="radio-interest" type="radio" value="dev-site">
+								<label for="dev-site" class="anim-red dev-site">Разработка сайта</label>
+							</div>
+							<div class="block-interest padding-mobile-app">
+								<input id="mobile-app" class="select" name="radio-interest" type="radio" value="mobile-app">
+								<label for="mobile-app" class="anim-red mobile-app">Разработка мобильного приложения</label>
+							</div>
+							<div class="block-interest">
+								<input id="advance" class="select" name="radio-interest" type="radio" value="advance">
+								<label for="advance" class="anim-red advance">Продвижение сайта</label>
+							</div>
+							<div class="block-interest">
+								<input id="another" class="select" name="radio-interest" type="radio" value="another">
+								<label for="another" class="anim-red another">Другое</label>
+							</div>
+							<div style="clear:both;"></div>
+						</div>
+						<!-- Третья форма. Конец. -->
+
+						<!-- Последняя форма -->
+						<div class="form-part-4">
+
+							<div class="label-effect">
+								<label for="budget">Бюджет</label>
+								<input id="budget" type="number" name="budget" autocomplete="on" min="1000">
+							</div>
+											
+							<div class="label-effect">
+								<label for="project-details" class="top-project-details">Детали проекта</label>
+								<textarea id="project-details" type="text" required></textarea>
+							</div>
+							
+							<!-- Прикрепить документ. Начало. -->
+							<div class="contain-attach">
+								<div class="file-list">
+								</div>
+
+								<div class="block-attach">
+									<label for="file" onClick="$('#fileupload').click();">
+									<span class="attach-plus">+</span> 
+									<span class="attach-text">Прикрепить документ</span>
+									</label>	
+									<input id="fileupload" style="display: none;" type="file" name="files[]" multiple>
+								</div>
+							<div style="clear:both;"></div>
+							</div>
+							<!-- Прикрепить документ. Конец. -->
+						</div>
+
+						<input type="submit" id="submit-form" class="hidden">
+					</form>
+				</div>
+				<!-- Блок с формами. Конец -->
+
+				<!-- Блок-футер с кнопками управления. Начало -->
+				<div class="discuss-block-controls">
+					<div class="left-block-button">
+
+						<div class="left-button-forward">
+								<svg class="arrow">
+									<!-- Первая слева точка -->
+									<circle class="knot arrow-knot" r="3" cx="15" cy="30" data-svg-origin="12 28"></circle>
+									<!-- Основная линия -->
+									<line class="line arrow-line" x1="15" y1="30" x2="50" y2="30" data-svg-origin="60 30" style="stroke-width: 1px;transform-origin: 0px 0px 0px;"></line>
+									<!-- Правая точка в конце линии -->
+									<circle class="knot arrow-knot" r="3" cx="50" cy="30" data-svg-origin="72 28"></circle>
+									<!-- Верхняя точка -->
+									<circle class="knot arrow-knot-2" r="3" cx="35" cy="19" data-svg-origin="30 9"></circle>
+									<!-- Нижняя точка -->
+									<circle class="knot arrow-knot-3" r="3" cx="35" cy="43" data-svg-origin="30 45"></circle>
+									<!-- Верхняя линия -->
+									<line class="line left-arrow-line-1" x1="50" y1="30" x2="55" y2="17" data-svg-origin="15 30"></line>
+									<!-- Нижняя линия -->
+									<line class="line left-arrow-line-2" x1="50" y1="30" x2="55" y2="43" data-svg-origin="30 30"></line>
+								</svg>
+							<div class="left-text-forward">Назад</div>
+							<div class="left-text-forward-2">Назад</div>
+							<div class="left-text-forward-3">Назад</div>	
+							<div style="clear:both"></div>
+						</div>
+
+					</div>
+					<div class="discuss-pagination">
+						<ul>
+							<li class="one active">1</li>
+							<li class="two">2</li>
+							<li class="tree">3</li>
+							<li class="four">4</li>
+						</ul>
+					</div>
+
+					<div class="right-block-button">
+						<div class="right-button-forward">
+								<svg class="arrow">
+									<!-- Первая слева точка -->
+									<circle class="knot arrow-knot" r="3" cx="15" cy="30"></circle>
+									<!-- Основная линия -->
+									<line class="line arrow-line" x1="15" y1="30" x2="50" y2="30"></line>
+									<!-- Правая точка в конце линии -->
+									<circle class="knot arrow-knot" r="3" cx="50" cy="30"></circle>
+									<!-- Верхняя точка -->
+									<circle class="knot arrow-knot-2" r="3" cx="40" cy="19"></circle>
+									<!-- Нижняя точка -->
+									<circle class="knot arrow-knot-3" r="3" cx="40" cy="43"></circle>
+									<!-- Верхняя линия -->
+									<line class="line arrow-line-2" x1="50" y1="28" x2="47" y2="17" ></line>
+									<!-- Нижняя линия -->
+									<line class="line arrow-line-3" x1="50" y1="30" x2="50" y2="43"></line>
+								</svg>
+							<div class="right-text-forward">Далее</div>
+							<div class="right-text-forward-2">Далее</div>
+							<div class="right-text-forward-3">Далее</div>	
+							<label for="submit-form" class="right-text-forward-4">Готово</div>
+							<div style="clear:both"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Блок-footer с кнопками управления. Конец -->
+			</div>
+
+		</div>
+		<!-- Модальное окно. Обсуждения. Конец. -->
+		
+		<!-- Модальное окно. Аудит. Начало. -->
+		<div id="fullscreen-2">
+			
+			<div class="audit-container">
+				<!-- Блок-header, содержащий заголовок и тексты. Начало -->
+				<div class="audit-block-header">
+					<a href="#" class="close"><span class="closed rounded heavy"></span></a>
+			
+					<header>
+						<h2>Заказть аудит</h2>
+					</header>
+
+						<div class="audit-header-text">
+							<p>Расскажите о своем проекте или задачах.</p>
+							<p>Для начала укажите свои контактные данные.</p>
+						</div>
+					<div style="clear:both"></div>
+				</div>
+				<!-- Блок-header, содержащий заголовок и тексты. Конец -->
+
+				<!-- Блок с формами. Начало -->
+				<div class="audit-block-form">
+					<form id="audit-form" action="#" method="post">
+						<!-- Первая форма. Начало. -->
+						<div class="form-audit-part-1">				
+							<div class="label-effect">
+								<label for="audit-name">Ваше имя</label>
+								<input id="audit-name" class="formname" type="text" name="name" autocomplete="on">
+							</div>
+											
+							<div class="half-label-effect left-label">
+								<label for="audit-mail">Email</label>
+								<input id="audit-mail" class="form-mail" type="email" name="email" autocomplete="on">
+							</div>
+
+							<div class="half-label-effect">
+								<label for="audit-tel">Телефон</label>
+								<input id="audit-tel" class="form-tel" type="number" name="tel" autocomplete="on">
+							</div>
+						</div>
+						<!-- Первая форма. Конец. -->
+
+						<!-- Вторая форма. Начало. -->
+						<div class="form-audit-part-2">
+							<div class="label-effect">
+								<label for="audit-company">Название компании</label>
+								<input id="audit-company" type="text" name="company" class="formcompany" autocomplete="on">
+							</div>
+							<div class="label-effect url">
+								<label for="audit-url">Адрес сайта (если есть)</label>
+								<input id="audit-url" type="text" name="url" data-validation="url" class="formurl">
+							</div>
+						</div>
+						<!-- Вторая форма. Конец. -->
+
+						<input type="submit" id="submit-form-audit" class="hidden">
+					</form>
+				</div>
+				<!-- Блок с формами. Конец -->
+
+				<!-- Блок-футер с кнопками управления. Начало -->
+				<div class="audit-block-controls">
+					<div class="left-block-button">
+
+						<div class="left-button-forward">
+								<svg class="arrow">
+									<!-- Первая слева точка -->
+									<circle class="knot arrow-knot" r="3" cx="15" cy="30" data-svg-origin="12 28"></circle>
+									<!-- Основная линия -->
+									<line class="line arrow-line" x1="15" y1="30" x2="50" y2="30" data-svg-origin="60 30" style="stroke-width: 1px;transform-origin: 0px 0px 0px;"></line>
+									<!-- Правая точка в конце линии -->
+									<circle class="knot arrow-knot" r="3" cx="50" cy="30" data-svg-origin="72 28"></circle>
+									<!-- Верхняя точка -->
+									<circle class="knot arrow-knot-2" r="3" cx="35" cy="19" data-svg-origin="30 9"></circle>
+									<!-- Нижняя точка -->
+									<circle class="knot arrow-knot-3" r="3" cx="35" cy="43" data-svg-origin="30 45"></circle>
+									<!-- Верхняя линия -->
+									<line class="line left-arrow-line-1" x1="50" y1="30" x2="55" y2="17" data-svg-origin="15 30"></line>
+									<!-- Нижняя линия -->
+									<line class="line left-arrow-line-2" x1="50" y1="30" x2="55" y2="43" data-svg-origin="30 30"></line>
+								</svg>
+							<div class="left-text-forward-4">Назад</div>
+							<div style="clear:both"></div>
+						</div>
+
+					</div>
+					<div class="audit-pagination">
+						<ul>
+							<li class="one active">1</li>
+							<li class="two">2</li>
+						</ul>
+					</div>
+
+					<div class="right-block-button">
+						<div class="right-button-forward">
+								<svg class="arrow">
+									<!-- Первая слева точка -->
+									<circle class="knot arrow-knot" r="3" cx="15" cy="30"></circle>
+									<!-- Основная линия -->
+									<line class="line arrow-line" x1="15" y1="30" x2="50" y2="30"></line>
+									<!-- Правая точка в конце линии -->
+									<circle class="knot arrow-knot" r="3" cx="50" cy="30"></circle>
+									<!-- Верхняя точка -->
+									<circle class="knot arrow-knot-2" r="3" cx="40" cy="19"></circle>
+									<!-- Нижняя точка -->
+									<circle class="knot arrow-knot-3" r="3" cx="40" cy="43"></circle>
+									<!-- Верхняя линия -->
+									<line class="line arrow-line-2" x1="50" y1="28" x2="47" y2="17" ></line>
+									<!-- Нижняя линия -->
+									<line class="line arrow-line-3" x1="50" y1="30" x2="50" y2="43"></line>
+								</svg>
+							<div class="right-text-forward-5">Далее</div>
+							<label for="submit-form-audit" class="right-text-forward-6">Готово</div>
+							<div style="clear:both"></div>
+						</div>
+					</div>
+				</div>
+				<!-- Блок-footer с кнопками управления. Конец -->
+			</div>
+
+		</div>
+		<!-- Модальное окно. Обсуждения. Конец. -->
+</div>
 	<!-- Footer конец --> 			
 	<!-- Подключенные скрипты -->
         <script src="/dist/js/jquery.min.js"></script>
 		<script src="/dist/js/all.js"></script>
+		<script src="/dist/js/classie.js"></script>
+
+		<!-- STARTPAGE. HEADER_EFFECT -->
+		<script>
+			(function() {
+
+				// detect if IE : from http://stackoverflow.com/a/16657946		
+				var ie = (function(){
+					var undef,rv = -1; // Return value assumes failure.
+					var ua = window.navigator.userAgent;
+					var msie = ua.indexOf('MSIE ');
+					var trident = ua.indexOf('Trident/');
+
+					if (msie > 0) {
+						// IE 10 or older => return version number
+						rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+					} else if (trident > 0) {
+						// IE 11 (or newer) => return version number
+						var rvNum = ua.indexOf('rv:');
+						rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
+					}
+
+					return ((rv > -1) ? rv : undef);
+				}());
+
+
+				// disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179					
+				// left: 37, up: 38, right: 39, down: 40,
+				// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+				var keys = [32, 37, 38, 39, 40], wheelIter = 0;
+
+				function preventDefault(e) {
+					e = e || window.event;
+					if (e.preventDefault)
+					e.preventDefault();
+					e.returnValue = false;  
+				}
+
+				function keydown(e) {
+					for (var i = keys.length; i--;) {
+						if (e.keyCode === keys[i]) {
+							preventDefault(e);
+							return;
+						}
+					}
+				}
+
+				function touchmove(e) {
+					preventDefault(e);
+				}
+
+				function wheel(e) {
+					// for IE 
+					//if( ie ) {
+						//preventDefault(e);
+					//}
+				}
+
+				function disable_scroll() {
+					window.onmousewheel = document.onmousewheel = wheel;
+					document.onkeydown = keydown;
+					document.body.ontouchmove = touchmove;
+				}
+
+				function enable_scroll() {
+					window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;  
+				}
+
+				var docElem = window.document.documentElement,
+					scrollVal,
+					isRevealed, 
+					noscroll, 
+					isAnimating,
+					container = document.getElementById( 'container' ),
+					trigger = container.querySelector( 'button.trigger' );
+
+				function scrollY() {
+					return window.pageYOffset || docElem.scrollTop;
+				}
+				
+				function scrollPage() {
+					scrollVal = scrollY();
+					
+					if( noscroll && !ie ) {
+						if( scrollVal < 0 ) return false;
+						// keep it that way
+						window.scrollTo( 0, 0 );
+					}
+
+					if( classie.has( container, 'notrans' ) ) {
+						classie.remove( container, 'notrans' );
+						return false;
+					}
+
+					if( isAnimating ) {
+						return false;
+					}
+					
+					if( scrollVal <= 0 && isRevealed ) {
+						toggle(0);
+					}
+					else if( scrollVal > 0 && !isRevealed ){
+						toggle(1);
+					}
+				}
+
+				function toggle( reveal ) {
+					isAnimating = true;
+					
+					if( reveal ) {
+						classie.add( container, 'modify' );
+					}
+					else {
+						noscroll = true;
+						disable_scroll();
+						classie.remove( container, 'modify' );
+					}
+
+					// simulating the end of the transition:
+					setTimeout( function() {
+						isRevealed = !isRevealed;
+						isAnimating = false;
+						if( reveal ) {
+							noscroll = false;
+							enable_scroll();
+						}
+					}, 1200 );
+				}
+
+				// refreshing the page...
+				var pageScroll = scrollY();
+				noscroll = pageScroll === 0;
+				
+				disable_scroll();
+				
+				if( pageScroll ) {
+					isRevealed = true;
+					classie.add( container, 'notrans' );
+					classie.add( container, 'modify' );
+				}
+				
+				window.addEventListener( 'scroll', scrollPage );
+				trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
+			})();
+		</script>
+		<!-- STARTPAGE. HEADER_EFFECT -->
+
+		<!-- Модальное окно -->
+		<script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>	
+		<!-- Модальное окно -->
 
 		<!-- О нас -->
-		<script src="/dist/js/modernizr.custom.grid.js"></script>
+		<script src=dist/js/modernizr.custom.grid.js"></script>
 		<script src="/dist/js/jquery.hoverdir.js"></script>
 
 		<script>
@@ -75,6 +532,113 @@
 		<script src="/dist/js/parallaxmouse.js"></script>
 		<!-- главная страница -->
 		
+
+		<!-- Обсуждение -->
+		<script>
+			$(document).ready(function($){
+   
+			    var full = $('#fullscreen');
+			    $(full).data('state','open');
+			    $('.item-discuss-text').click(function(){
+			      if($(full).data('state') == 'open'){
+			        $(full).fadeIn(500);
+			        $(full).data('state','close');
+			        $("body").css("overflow","hidden");
+			        //console.log($(full).data('state') );
+			      }
+			    });
+			    $('.close').click(function(){
+			      if($(full).data('state') == 'close'){
+			        $(full).fadeOut();
+			        $(full).data('state','open');
+
+			        $("body").css("overflow","auto");
+
+			        for(var i=1;i<=4;++i){
+			        	$(".discuss-block-form").find(".form-part-"+i+"").css("display","none");
+			        	$(".right-button-forward").find(".right-text-forward-"+i+"").css("display","none");
+			        	$(".left-button-forward").find(".left-text-forward-"+i+"").css("display","none");
+			       	}
+			       	
+
+			       	// Сброс настроек с input'ов
+	  				$(".discuss-block-form").find(".label-effect").removeClass("active");
+  					$(".discuss-block-form").find(".half-label-effect").removeClass("active");
+					$(".discuss-block-form").find(".anim-red").removeClass("check");
+			        // Сброс формы.
+			        $('#discuss-form').trigger('reset');
+			        //Форма. Добавленные документы. 
+			        $('.file-list').empty();
+			        // Первая форма.
+			        $(".form-part-1").css("display","block");
+			        $(".discuss-block-form").css("margin-bottom","100px");
+			        // Пагинатор
+			       		$(".two").removeClass("active");
+			       		$(".tree").removeClass("active");
+				        $(".four").removeClass("active");
+				        $(".one").addClass("active");
+			        // Блок-footer
+            		$(".discuss-block-controls").css("display","block");
+            		// Кнопки
+            			$(".right-text-forward").css("display","block");
+			       		$(".left-button-forward").css("display","none");
+            		// Текст
+			        $(".discuss-header-text").empty();
+			        $(".discuss-header-text").append( "<p>Расскажите о своем проекте или задачах.</p><p>Для начала укажите свои контактные данные.</p>" );
+			      }
+			    });  
+			});
+
+			$(document).ready(function($){
+				var full2 = $('#fullscreen-2');
+				$(full2).data('state','open');
+			    $('.audit-launch').click(function(){
+			      if($(full2).data('state') == 'open'){
+			        $(full2).fadeIn(500);
+			        $(full2).data('state','close');
+			        $("body").css("overflow","hidden");
+			        //console.log($(full).data('state') );
+			      }
+			    });
+
+			    $('.close').click(function(){
+			      if($(full2).data('state') == 'close'){
+			        $(full2).fadeOut();
+			        $(full2).data('state','open');
+
+			        $("body").css("overflow","auto");
+
+			        for(var i=1;i<=6;++i){
+			        	$(".audit-block-form").find(".form-part-"+i+"").css("display","none");
+			        	$(".right-button-forward").find(".right-text-forward-"+i+"").css("display","none");
+			        	$(".left-button-forward").find(".left-text-forward-"+i+"").css("display","none");
+			       	}
+			       	
+			       	// Сброс настроек с input'ов
+	  				$(".audit-block-form").find(".label-effect").removeClass("active");
+  					$(".audit-block-form").find(".half-label-effect").removeClass("active");
+					$(".audit-block-form").find(".anim-red").removeClass("check");
+			        // Сброс формы.
+			        $('#audit-form').trigger('reset');
+			        // Первая форма.
+			        $(".form-audit-part-1").css("display","block");
+			        $(".audit-block-form").css("margin-bottom","100px");
+			        // Пагинатор
+			       		$(".two").removeClass("active");
+				        $(".one").addClass("active");
+			        // Блок-footer
+            		$(".audit-block-controls").css("display","block");
+            		// Кнопки
+            			$(".right-text-forward-5").css("display","block");
+			       		$(".left-button-forward").css("display","none");
+            		// Текст
+			        $(".audit-header-text").empty();
+			        $(".audit-header-text").append( "<p>Расскажите о своем проекте или задачах.</p><p>Для начала укажите свои контактные данные.</p>" );
+			      }
+			    });  
+			});
+		</script>	
+		<!-- Обсуждение -->
 			<? echo $scriptOrg;?>
 			
 </body>

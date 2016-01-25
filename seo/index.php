@@ -11,7 +11,7 @@
 ?>
 
 		<!-- Content начало -->
-		<main class="page-seo">
+		<main class="page-seo fon-page">
 
 		<div class="page-mask"></div>
 

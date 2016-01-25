@@ -10,26 +10,9 @@
 	include $_SERVER['DOCUMENT_ROOT']."/data/header.html";
 ?>
 
-sadfasdfasdf
+
 		<!-- Content начало -->
 		<main class="page-main">
-			<section class="start-page">
-				<div class="content-header">
-					<div class="content-header-mask"></div>	
-						<div class="content">
-							<img src="dist/img/logo1.png" alt="Лого" class="logo-1">
-								<div class="content-header-text">
-									<h1>Разработка корпоративных сайтов для компаний в сфере<br>
-									услуг и производства, с акцентом на продвижение в поисковых системах</h1>
-								</div>
-									<div class="block-button">
-										<div class="group-button button-icon"><span class="icon-1"></span></div>
-										<a class="group-button button-discussion" href="#">Обсудить проект</a>
-									</div>
-						</div>		
-						
-				</div>
-			</section>
 
 			<section class="second-section">
 					<div class="row">
