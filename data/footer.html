@@ -2,11 +2,13 @@
 				<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "contacts") {?>
 				<div class="page-mask"></div> 
 				<?}?>	
+
+					<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) !== "blog") {?>
 					<div class="footer-container footer-wrap-big-buttons">
 
 						<div id="footer-big-button-1" class="footer-big-button">
 							<span class="icon-1"></span>
-							<a href="#">Обсудить проект</a>
+							<a href="#" class="discuss-window">Обсудить проект</a>
 
 							<p>Изложите свои задачи и идеи, а мы расскажем, как сможем решить их.</p>
 						</div>
@@ -29,6 +31,9 @@
 					</div>
 			</div>
 
+<?if ((str_replace("/", "", $_SERVER['REQUEST_URI']) == "contacts")||(str_replace("/", "", $_SERVER['REQUEST_URI']) == "dev")||(str_replace("/", "", $_SERVER['REQUEST_URI']) == "seo")) {?>	
+</div>
+<?}?>
 				<!-- Footer. Нижняя полоса. Начало. -->
 				<footer>
 					<div class="footer-below">
@@ -56,6 +61,7 @@
 					</div>
 				</footer>
 				<!-- Footer. Нижняя полоса. Конец. -->
+				<?}?>
 
 		<!-- Модальное окно. Обсуждения. Начало. -->
 		<div id="fullscreen">
@@ -359,287 +365,94 @@
 			</div>
 
 		</div>
-		<!-- Модальное окно. Обсуждения. Конец. -->
-</div>
+		<!-- Модальное окно. Аудит. Конец. -->
+	</div>
+
 	<!-- Footer конец --> 			
 	<!-- Подключенные скрипты -->
         <script src="/dist/js/jquery.min.js"></script>
 		<script src="/dist/js/all.js"></script>
-		<script src="/dist/js/classie.js"></script>
+		<script>transformicons.add('.tcon')</script>
 
-		<!-- STARTPAGE. HEADER_EFFECT -->
-		<script>
-			(function() {
-
-				// detect if IE : from http://stackoverflow.com/a/16657946		
-				var ie = (function(){
-					var undef,rv = -1; // Return value assumes failure.
-					var ua = window.navigator.userAgent;
-					var msie = ua.indexOf('MSIE ');
-					var trident = ua.indexOf('Trident/');
-
-					if (msie > 0) {
-						// IE 10 or older => return version number
-						rv = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
-					} else if (trident > 0) {
-						// IE 11 (or newer) => return version number
-						var rvNum = ua.indexOf('rv:');
-						rv = parseInt(ua.substring(rvNum + 3, ua.indexOf('.', rvNum)), 10);
-					}
-
-					return ((rv > -1) ? rv : undef);
-				}());
-
-
-				// disable/enable scroll (mousewheel and keys) from http://stackoverflow.com/a/4770179					
-				// left: 37, up: 38, right: 39, down: 40,
-				// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-				var keys = [32, 37, 38, 39, 40], wheelIter = 0;
-
-				function preventDefault(e) {
-					e = e || window.event;
-					if (e.preventDefault)
-					e.preventDefault();
-					e.returnValue = false;  
-				}
-
-				function keydown(e) {
-					for (var i = keys.length; i--;) {
-						if (e.keyCode === keys[i]) {
-							preventDefault(e);
-							return;
-						}
-					}
-				}
-
-				function touchmove(e) {
-					preventDefault(e);
-				}
-
-				function wheel(e) {
-					// for IE 
-					//if( ie ) {
-						//preventDefault(e);
-					//}
-				}
-
-				function disable_scroll() {
-					window.onmousewheel = document.onmousewheel = wheel;
-					document.onkeydown = keydown;
-					document.body.ontouchmove = touchmove;
-				}
-
-				function enable_scroll() {
-					window.onmousewheel = document.onmousewheel = document.onkeydown = document.body.ontouchmove = null;  
-				}
-
-				var docElem = window.document.documentElement,
-					scrollVal,
-					isRevealed, 
-					noscroll, 
-					isAnimating,
-					container = document.getElementById( 'container' ),
-					trigger = container.querySelector( 'button.trigger' );
-
-				function scrollY() {
-					return window.pageYOffset || docElem.scrollTop;
-				}
-				
-				function scrollPage() {
-					scrollVal = scrollY();
-					
-					if( noscroll && !ie ) {
-						if( scrollVal < 0 ) return false;
-						// keep it that way
-						window.scrollTo( 0, 0 );
-					}
-
-					if( classie.has( container, 'notrans' ) ) {
-						classie.remove( container, 'notrans' );
-						return false;
-					}
-
-					if( isAnimating ) {
-						return false;
-					}
-					
-					if( scrollVal <= 0 && isRevealed ) {
-						toggle(0);
-					}
-					else if( scrollVal > 0 && !isRevealed ){
-						toggle(1);
-					}
-				}
-
-				function toggle( reveal ) {
-					isAnimating = true;
-					
-					if( reveal ) {
-						classie.add( container, 'modify' );
-					}
-					else {
-						noscroll = true;
-						disable_scroll();
-						classie.remove( container, 'modify' );
-					}
-
-					// simulating the end of the transition:
-					setTimeout( function() {
-						isRevealed = !isRevealed;
-						isAnimating = false;
-						if( reveal ) {
-							noscroll = false;
-							enable_scroll();
-						}
-					}, 1200 );
-				}
-
-				// refreshing the page...
-				var pageScroll = scrollY();
-				noscroll = pageScroll === 0;
-				
-				disable_scroll();
-				
-				if( pageScroll ) {
-					isRevealed = true;
-					classie.add( container, 'notrans' );
-					classie.add( container, 'modify' );
-				}
-				
-				window.addEventListener( 'scroll', scrollPage );
-				trigger.addEventListener( 'click', function() { toggle( 'reveal' ); } );
-			})();
-		</script>
-		<!-- STARTPAGE. HEADER_EFFECT -->
-
-		<!-- Модальное окно -->
-		<script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>	
-		<!-- Модальное окно -->
-
-		<!-- О нас -->
-		<script src=dist/js/modernizr.custom.grid.js"></script>
-		<script src="/dist/js/jquery.hoverdir.js"></script>
-
-		<script>
-			$(function() {
-    		$(' .team-list > li').each( function() { $(this).hoverdir({hoverDelay : 75}); } );
-			});
-		</script>
-		<!-- О нас -->
-
-		<!-- главная страница -->
-		<script src="/dist/js/owl.carousel.min.js"></script>
-		<script src="/dist/js/parallaxmouse.js"></script>
-		<!-- главная страница -->
+		<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "") {?>
+    <!-- Главная страница -->
+    		<!-- Header effect -->
+    		<script src="/dist/js/header.effect.js"></script>
+    		<script src="/dist/js/classie.js"></script>
+    		<!-- Header effect -->
+			<script src="/dist/js/parallaxmouse.js"></script>
+			<script src="/dist/js/owl.carousel.min.js"></script>
+			<script src="/dist/js/owl.setting.js"></script>
+			<!-- Главная страница -->
+		<?}?>
 		
+		<!-- Модальное окно. Валидация. -->
+		<script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>	
+		<!-- Модальное окно. Валидация. -->
 
-		<!-- Обсуждение -->
-		<script>
-			$(document).ready(function($){
-   
-			    var full = $('#fullscreen');
-			    $(full).data('state','open');
-			    $('.item-discuss-text').click(function(){
-			      if($(full).data('state') == 'open'){
-			        $(full).fadeIn(500);
-			        $(full).data('state','close');
-			        $("body").css("overflow","hidden");
-			        //console.log($(full).data('state') );
-			      }
-			    });
-			    $('.close').click(function(){
-			      if($(full).data('state') == 'close'){
-			        $(full).fadeOut();
-			        $(full).data('state','open');
+		<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "about") {?>
+			<!-- О нас -->
+			<script src="/dist/js/modernizr.custom.grid.js"></script>
+			<script src="/dist/js/hover.about.js"></script>
+			<script src="/dist/js/jquery.hoverdir.js"></script>
+			<!-- О нас -->
+		<?}?>
 
-			        $("body").css("overflow","auto");
+			<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "blog") {?>
+			<!-- Блог -->
+			<script src="/dist/js/glide.min.js"></script>
+			<script>
+			var scl,paddingSize; // Create a variable
+			var heightScreen = $(document).height();
 
-			        for(var i=1;i<=4;++i){
-			        	$(".discuss-block-form").find(".form-part-"+i+"").css("display","none");
-			        	$(".right-button-forward").find(".right-text-forward-"+i+"").css("display","none");
-			        	$(".left-button-forward").find(".left-text-forward-"+i+"").css("display","none");
-			       	}
-			       	
+				window.setInterval(function(){
+				   scl=0; // Reset this variable every 1.5 seconds
+				}, 700);
 
-			       	// Сброс настроек с input'ов
-	  				$(".discuss-block-form").find(".label-effect").removeClass("active");
-  					$(".discuss-block-form").find(".half-label-effect").removeClass("active");
-					$(".discuss-block-form").find(".anim-red").removeClass("check");
-			        // Сброс формы.
-			        $('#discuss-form').trigger('reset');
-			        //Форма. Добавленные документы. 
-			        $('.file-list').empty();
-			        // Первая форма.
-			        $(".form-part-1").css("display","block");
-			        $(".discuss-block-form").css("margin-bottom","100px");
-			        // Пагинатор
-			       		$(".two").removeClass("active");
-			       		$(".tree").removeClass("active");
-				        $(".four").removeClass("active");
-				        $(".one").addClass("active");
-			        // Блок-footer
-            		$(".discuss-block-controls").css("display","block");
-            		// Кнопки
-            			$(".right-text-forward").css("display","block");
-			       		$(".left-button-forward").css("display","none");
-            		// Текст
-			        $(".discuss-header-text").empty();
-			        $(".discuss-header-text").append( "<p>Расскажите о своем проекте или задачах.</p><p>Для начала укажите свои контактные данные.</p>" );
-			      }
-			    });  
+
+			if((heightScreen>=705) && (heightScreen<850)){
+				paddingSize='20%';
+				$('.contain').css('height',"100%");
+				$('.header-mask').css('height','22%');
+				$('.footer-mask').css('height','18%');
+			}else if((heightScreen>=850) && (heightScreen<1150)){
+				paddingSize='25%';
+				$('.contain').css('height',"100%");
+				$('.header-mask').css('height','27%');
+				$('.footer-mask').css('height','23%');
+			}
+
+			var carousel = $('#Carousel').glide({
+				type: 'carousel',
+				mode: 'vertical',
+				animationTimingFunc:'cubic-bezier(0.165, 0.240, 0.440, 0.440)',
+				paddings: paddingSize,
+				keyboard: true,
+				autoplay: false,
 			});
 
-			$(document).ready(function($){
-				var full2 = $('#fullscreen-2');
-				$(full2).data('state','open');
-			    $('.audit-launch').click(function(){
-			      if($(full2).data('state') == 'open'){
-			        $(full2).fadeIn(500);
-			        $(full2).data('state','close');
-			        $("body").css("overflow","hidden");
-			        //console.log($(full).data('state') );
-			      }
-			    });
-
-			    $('.close').click(function(){
-			      if($(full2).data('state') == 'close'){
-			        $(full2).fadeOut();
-			        $(full2).data('state','open');
-
-			        $("body").css("overflow","auto");
-
-			        for(var i=1;i<=6;++i){
-			        	$(".audit-block-form").find(".form-part-"+i+"").css("display","none");
-			        	$(".right-button-forward").find(".right-text-forward-"+i+"").css("display","none");
-			        	$(".left-button-forward").find(".left-text-forward-"+i+"").css("display","none");
-			       	}
-			       	
-			       	// Сброс настроек с input'ов
-	  				$(".audit-block-form").find(".label-effect").removeClass("active");
-  					$(".audit-block-form").find(".half-label-effect").removeClass("active");
-					$(".audit-block-form").find(".anim-red").removeClass("check");
-			        // Сброс формы.
-			        $('#audit-form').trigger('reset');
-			        // Первая форма.
-			        $(".form-audit-part-1").css("display","block");
-			        $(".audit-block-form").css("margin-bottom","100px");
-			        // Пагинатор
-			       		$(".two").removeClass("active");
-				        $(".one").addClass("active");
-			        // Блок-footer
-            		$(".audit-block-controls").css("display","block");
-            		// Кнопки
-            			$(".right-text-forward-5").css("display","block");
-			       		$(".left-button-forward").css("display","none");
-            		// Текст
-			        $(".audit-header-text").empty();
-			        $(".audit-header-text").append( "<p>Расскажите о своем проекте или задачах.</p><p>Для начала укажите свои контактные данные.</p>" );
-			      }
-			    });  
+			$(window).on('DOMMouseScroll mousewheel', function(event) {
+				var glide_api = $(".glide").data('glide_api');
+			    if (event.originalEvent.wheelDelta > 0) {
+			    	if (scl===0){
+			    		// Вверх 
+			        	glide_api.go('<');
+			        	scl=10;
+			        }
+			    }
+			    else {
+			    	if (scl==0){
+			    		// Вниз
+			        	glide_api.go('>');
+			        	scl=10;
+			        }	
+			    }
 			});
-		</script>	
-		<!-- Обсуждение -->
-			<? echo $scriptOrg;?>
+			</script>
+			<!-- Блог -->
+			<?}?>
+
+		<? echo $scriptOrg;?>
 			
 </body>
 </html>

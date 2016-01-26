@@ -16,11 +16,13 @@
 
 			<section class="second-section">
 					<div class="row">
-							<div class="col-md-6 servise left-block">
+							<a href="/dev/">
+								<div class="col-md-6 servise left-block">
 									
+
 									<div class="col-md-12 servise-block-text">
 										<h2>Разработка сайтов и мобильных приложений</h2>
-										<a href="#">Узнать больше о разработке</a>
+										<span>Узнать больше о разработке</span>
 										<br>
 										<span class="icon-left-block icon-left"></span>
 									</div>
@@ -48,42 +50,46 @@
 									<!-- Конец. Линии на border'е. -->
 
 											<img id="layer-1" src="dist/img/figure-1.png" alt="Фигура №1" class="parallax top-figure-1 top">
-											<img id="layer-2" src="dist/img/figure-2.png" alt="Фигура №2" class="parallax top-figure-2">		
-							</div>
-
-								<div class="col-md-6 servise right-block">
-
-									<div class="col-md-12 servise-block-text">
-										<h2>Комплексное продвижение в интернете</h2>
-										<a href="#">Узнать больше о разработке</a>
-										<br>
-										<span class="icon-right-block icon-right"></span>
-									</div>
-
-										<div class="line top-left"></div>
-										<div class="line left-top"></div>
-										<div class="line top-right"></div>
-										<div class="line right-top"></div>						
-										<div class="line bottom-left"></div>
-										<div class="line left-bottom"></div>
-										<div class="line bottom-right"></div>
-										<div class="line right-bottom"></div>
-
-											<div class="col-md-6 inside-block">
-												<div class="line inside-right-bottom"></div>
-												<div class="line inside-bottom-right"></div>
-											</div>
-											<div class="col-md-6 inside-block"></div>
-											<div class="col-md-6 inside-block"></div>
-											<div class="col-md-6 inside-block">
-												<div class="line inside-top-left"></div>
-												<div class="line inside-left-top"></div>
-											</div>
-		
-											<img id="layer-3" src="dist/img/figure-3.png" alt="Фигура №3" class="parallax top-figure-3 top">
-											<img id="layer-4" src="dist/img/figure-4.png" alt="Фигура №4" class="parallax top-figure-4">
+											<img id="layer-2" src="dist/img/figure-2.png" alt="Фигура №2" class="parallax top-figure-2">	
 								</div>
-								
+							</a>
+
+								<a href="/seo/">
+									<div class="col-md-6 servise right-block">
+										
+										<div class="col-md-12 servise-block-text">
+											<h2>Комплексное продвижение в интернете</h2>
+											<span>
+											Узнать больше о разработке
+											</span>
+											<br>
+											<span class="icon-right-block icon-right"></span>
+										</div>
+
+											<div class="line top-left"></div>
+											<div class="line left-top"></div>
+											<div class="line top-right"></div>
+											<div class="line right-top"></div>						
+											<div class="line bottom-left"></div>
+											<div class="line left-bottom"></div>
+											<div class="line bottom-right"></div>
+											<div class="line right-bottom"></div>
+
+												<div class="col-md-6 inside-block">
+													<div class="line inside-right-bottom"></div>
+													<div class="line inside-bottom-right"></div>
+												</div>
+												<div class="col-md-6 inside-block"></div>
+												<div class="col-md-6 inside-block"></div>
+												<div class="col-md-6 inside-block">
+													<div class="line inside-top-left"></div>
+													<div class="line inside-left-top"></div>
+												</div>
+			
+												<img id="layer-3" src="dist/img/figure-3.png" alt="Фигура №3" class="parallax top-figure-3 top">
+												<img id="layer-4" src="dist/img/figure-4.png" alt="Фигура №4" class="parallax top-figure-4">
+									</div>
+								</a>
 					</div>
 			</section>	
 
@@ -95,7 +101,7 @@
 								<div class="project-heading-text">
 									<h2>Реализованные проекты</h2>
 									<div class="projects-more">
-										<a href="#">
+										<a href="/projects/">
 										<svg class="arrow">
 											<!-- Первая слева точка -->
 											<circle class="knot arrow-knot" r="3" cx="15" cy="30" data-svg-origin="12 28"></circle>
@@ -410,7 +416,7 @@
 							<header>
 								<h2 class="articles-header">Статьи. <span>Пишем. Переводим.</span></h2>
 									<div class="more-articles">
-										<a href="#">
+										<a href="/blog/">
 										<svg class="arrow">
 											<!-- Первая слева точка -->
 											<circle class="knot arrow-knot" r="3" cx="15" cy="30" data-svg-origin="12 28"></circle>

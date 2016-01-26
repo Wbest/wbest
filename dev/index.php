@@ -61,7 +61,7 @@
 
 									<div class="block-button">
 										<div class="group-button button-icon"><span class="icon-1"></span></div>
-										<a class="group-button button-discussion" href="#">Обсудить проект</a>
+										<a class="group-button button-discussion discuss-window" href="#">Обсудить проект</a>
 									</div>
 								<div class="line top-left"></div>
 								<div class="line left-top"></div>
@@ -277,7 +277,7 @@
 
 									<div class="block-button">
 										<div class="group-button button-icon"><span class="icon-1"></span></div>
-										<a class="group-button button-discussion" href="#">Обсудить проект</a>
+										<a class="group-button button-discussion discuss-window" href="#">Обсудить проект</a>
 									</div>
 								<div class="line top-left"></div>
 								<div class="line left-top"></div>
@@ -492,7 +492,7 @@
 
 									<div class="block-button">
 										<div class="group-button button-icon"><span class="icon-1"></span></div>
-										<a class="group-button button-discussion" href="#">Обсудить проект</a>
+										<a class="group-button button-discussion discuss-window" href="#">Обсудить проект</a>
 									</div>
 								<div class="line top-left"></div>
 								<div class="line left-top"></div>

@@ -26,11 +26,12 @@
 	<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "") {?>
 	<div id="container" class="intro-effect-push">
 	<nav>
-		  <div class="navToggle"> 
-		    <a class="navicon-button uarr">
-		      <div class="navicon"></div>
-		    </a>  
-		  </div>
+
+		    <button type="button" class="tcon tcon-menu--arrow tcon-menu--arrowup uarr" aria-label="toggle menu">
+				  <span class="tcon-menu__lines" aria-hidden="true"></span>
+				  <span class="tcon-visuallyhidden">toggle menu</span>
+			</button>
+
 		  	<div class="nav-contact">
   		  		<a rel="nofollow" style="text-decoration:none;" href="tel:+78202-74-22-90">+7 (8202) 742 290</a>
   		  		<a rel="nofollow" style="text-decoration:none;" href="mailto:info@wbest.ru">info@wbest.ru</a>
@@ -58,15 +59,15 @@
 			    </li>
 			    <li>
 			    	<a href="/projects/"><span class="menu-icon-item item-portfolio"></span></a>
-				    <a href="/projects/" class="item-portfolio-text uarr">Портфолио</a>
+				    <a href="/projects/" class="item-portfolio-text">Портфолио</a>
 			    </li>
 			    <li>
 			    	<a href="/blog/"><span class="menu-icon-item item-blog"></span></a>
-				    <a href="/blog/" class="item-blog-text uarr">Блог</a>
+				    <a href="/blog/" class="item-blog-text">Блог</a>
 			    </li>
 			    <li>
-			    	<a href="#" class="uarr"><span class="menu-icon-item item-discuss"></span></a>
-				    <a href="#" class="item-discuss-text uarr">Обсудить проект</a>
+			    	<a href="#"><span class="menu-icon-item item-discuss uarr"></span></a>
+				    <a href="#" class="item-discuss-text discuss-window uarr">Обсудить проект</a>
 			    </li>
 			  </ul>
 		</nav>
@@ -90,7 +91,7 @@
 								</div>
 									<div class="block-button">
 										<div class="group-button button-icon"><span class="icon-1"></span></div>
-										<a class="group-button button-discussion" href="#">Обсудить проект</a>
+										<a class="group-button button-discussion discuss-window" href="#">Обсудить проект</a>
 									</div>
 						</div>		
 				</div>
@@ -99,11 +100,11 @@
 		</div>
 		<? } else {?>
 		<nav>
-		  <div class="navToggle"> 
-		    <a class="navicon-button uarr">
-		      <div class="navicon"></div>
-		    </a>  
-		  </div>
+		    <button type="button" class="tcon tcon-menu--arrow tcon-menu--arrowup uarr" aria-label="toggle menu">
+				  <span class="tcon-menu__lines" aria-hidden="true"></span>
+				  <span class="tcon-visuallyhidden">toggle menu</span>
+			</button>
+
 		  	<div class="nav-contact">
   		  		<a rel="nofollow" style="text-decoration:none;" href="tel:+78202-74-22-90">+7 (8202) 742 290</a>
   		  		<a rel="nofollow" style="text-decoration:none;" href="mailto:info@wbest.ru">info@wbest.ru</a>
@@ -138,12 +139,13 @@
 				    <a href="/blog/" class="item-blog-text uarr">Блог</a>
 			    </li>
 			    <li>
-			    	<a href="#" class="uarr"><span class="menu-icon-item item-discuss"></span></a>
-				    <a href="#" class="item-discuss-text uarr">Обсудить проект</a>
+			    	<a href="#" class="uarr"><span class="menu-icon-item item-discuss discuss-window"></span></a>
+				    <a href="#" class="item-discuss-text discuss-window uarr">Обсудить проект</a>
 			    </li>
 			  </ul>
 		</nav>
 		<?}?>	
 	</header>
 	<!-- Header конец -->
-	<div <?if ((str_replace("/", "", $_SERVER['REQUEST_URI']) == "contacts")||(str_replace("/", "", $_SERVER['REQUEST_URI']) == "dev")) {?>class="contain fon-page"<?}else{?>class="contain"<?}?>>
+	<div class="contain">
+	<?if ((str_replace("/", "", $_SERVER['REQUEST_URI']) == "contacts")||(str_replace("/", "", $_SERVER['REQUEST_URI']) == "dev")||(str_replace("/", "", $_SERVER['REQUEST_URI']) == "seo")) {?><div class="fon-page"><?}?>
