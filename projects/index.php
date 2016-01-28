@@ -17,18 +17,18 @@
 						<h1>Реализованные<br> проекты</h1>
 					</header>
 						<div class="right-block-nav">
-							<a href="">Все работы</a>
-							<a href="">Продвижение</a>
-							<a href="">Разработка</a>
+							<div class="filter" data-filter="all">Все работы</div>
+							<div class="filter" data-filter=".category-1">Продвижение</div>
+							<div class="filter" data-filter=".category-2">Разработка</div>
 						</div>
 				<div style="clear:both;"></div>
 			</section>
 
 			<section>
-				<div class="row not-margin">
+				<div id="container-projects" class="row not-margin">
 
-					<div class="col-md-12 full-block-project hippocrates-full">
-						<a href="detail/index.php"></a>
+					<div class="col-md-12 full-block-project hippocrates-full mix category-1">
+						<a href="/projects/detail/"></a>
 						<h2>Гипократ</h2>
 							<svg class="project-svg">
 							<circle class="knot" r="3" cx="9" cy="10" data-svg-origin="30 9" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, 2, 0, 1);"></circle><circle class="knot" r="3" cx="30" cy="14" data-svg-origin="30 45" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, -2, 0, 1);"></circle><line class="line-1" x1="5" y1="12" x2="25" y2="12" data-svg-origin="15 30" style=""></line>
@@ -47,8 +47,8 @@
 							<div class="line trust-right-bottom"></div>
 					</div>
 
-					<div class="col-md-12 full-block-project asm-full">
-						<a href="detail/index.php"></a>
+					<div class="col-md-12 full-block-project asm-full mix category-2">
+						<a href="/projects/detail/"></a>
 						<h2>ASM</h2>
 							<svg class="project-svg">
 							<circle class="knot" r="3" cx="9" cy="10" data-svg-origin="30 9" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, 2, 0, 1);"></circle><circle class="knot" r="3" cx="30" cy="14" data-svg-origin="30 45" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, -2, 0, 1);"></circle><line class="line-1" x1="5" y1="12" x2="25" y2="12" data-svg-origin="15 30" style=""></line>
@@ -67,8 +67,8 @@
 						<div class="line trust-right-bottom"></div>
 					</div>
 
-					<div class="col-md-12 full-block-project authority-full">
-						<a href="detail/index.php"></a>
+					<div class="col-md-12 full-block-project authority-full mix category-1">
+						<a href="/projects/detail/"></a>
 						<h2>Авторитет</h2>
 							<svg class="project-svg">
 							<circle class="knot" r="3" cx="9" cy="10" data-svg-origin="30 9" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, 2, 0, 1);"></circle><circle class="knot" r="3" cx="30" cy="14" data-svg-origin="30 45" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, -2, 0, 1);"></circle><line class="line-1" x1="5" y1="12" x2="25" y2="12" data-svg-origin="15 30" style=""></line>
@@ -87,8 +87,8 @@
 						<div class="line trust-right-bottom"></div>
 					</div>
 
-					<div class="col-md-12 full-block-project promtekh-full">
-						<a href="detail/index.php"></a>
+					<div class="col-md-12 full-block-project promtekh-full mix category-2">
+						<a href="/projects/detail/"></a>
 						<h2>Промтехносталь</h2>
 							<svg class="project-svg">
 							<circle class="knot" r="3" cx="9" cy="10" data-svg-origin="30 9" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, 2, 0, 1);"></circle><circle class="knot" r="3" cx="30" cy="14" data-svg-origin="30 45" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, -2, 0, 1);"></circle><line class="line-1" x1="5" y1="12" x2="25" y2="12" data-svg-origin="15 30" style=""></line>
@@ -107,8 +107,8 @@
 						<div class="line trust-right-bottom"></div>
 					</div>
 
-					<div class="col-md-12 full-block-project csbu-full">
-						<a href="detail/index.php"></a>
+					<div class="col-md-12 full-block-project csbu-full mix category-1">
+						<a href="/projects/detail/"></a>
 						<h2>ЦСБУ</h2>
 							<svg class="project-svg">
 							<circle class="knot" r="3" cx="9" cy="10" data-svg-origin="30 9" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, 2, 0, 1);"></circle><circle class="knot" r="3" cx="30" cy="14" data-svg-origin="30 45" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, -2, 0, 1);"></circle><line class="line-1" x1="5" y1="12" x2="25" y2="12" data-svg-origin="15 30" style=""></line>
@@ -127,8 +127,8 @@
 						<div class="line trust-right-bottom"></div>
 					</div>
 
-					<div class="col-md-12 full-block-project hilook-full">
-						<a href="detail/index.php"></a>
+					<div class="col-md-12 full-block-project hilook-full mix category-1">
+						<a href="/projects/detail/"></a>
 						<h2>Hilook</h2>
 							<svg class="project-svg">
 							<circle class="knot" r="3" cx="9" cy="10" data-svg-origin="30 9" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, 2, 0, 1);"></circle><circle class="knot" r="3" cx="30" cy="14" data-svg-origin="30 45" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, -2, 0, 1);"></circle><line class="line-1" x1="5" y1="12" x2="25" y2="12" data-svg-origin="15 30" style=""></line>
@@ -147,8 +147,8 @@
 						<div class="line trust-right-bottom"></div>
 					</div>
 
-					<div class="col-md-12 full-block-project promtehsnast-full">
-						<a href="detail/index.php"></a>
+					<div class="col-md-12 full-block-project promtehsnast-full mix category-2">
+						<a href="/projects/detail/"></a>
 						<h2>Промтехоснастка</h2>
 							<svg class="project-svg">
 							<circle class="knot" r="3" cx="9" cy="10" data-svg-origin="30 9" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, 2, 0, 1);"></circle><circle class="knot" r="3" cx="30" cy="14" data-svg-origin="30 45" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, -2, 0, 1);"></circle><line class="line-1" x1="5" y1="12" x2="25" y2="12" data-svg-origin="15 30" style=""></line>
@@ -167,8 +167,8 @@
 						<div class="line trust-right-bottom"></div>
 					</div>
 
-					<div class="col-md-12 full-block-project floors-full">
-						<a href="detail/index.php"></a>
+					<div class="col-md-12 full-block-project floors-full mix category-2">
+						<a href="/projects/detail/"></a>
 						<h2>ТДК Этажи</h2>
 							<svg class="project-svg">
 							<circle class="knot" r="3" cx="9" cy="10" data-svg-origin="30 9" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, 2, 0, 1);"></circle><circle class="knot" r="3" cx="30" cy="14" data-svg-origin="30 45" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -5, -2, 0, 1);"></circle><line class="line-1" x1="5" y1="12" x2="25" y2="12" data-svg-origin="15 30" style=""></line>

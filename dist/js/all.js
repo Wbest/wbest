@@ -34,7 +34,6 @@ $(document).ready(function ($) {
         rules:{
           name:{required:true},
           email:{required:true},
-          tel:{required:true},
           company:{required:true},
           url:{required:true},
           budget:{required:true}
@@ -165,7 +164,7 @@ $(document).ready(function ($) {
 
 // Первая кнопка "Далее"
 $(".right-text-forward").click(function(){
-        var lengthTel = $('#tel').val().length, myURL = 'http://www.' + $('#url').val();
+        var lengthTel = $('#tel').val().length, myURL = 'http://www.' + $('#url').val(), filter = /((?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?)/g;
        if((!!form1.valid())&&(lengthTel>5)){
        $('#tel').removeClass("erroR");
        //Форма 
@@ -187,7 +186,10 @@ $(".right-text-forward").click(function(){
         //Левая 
        $(".left-text-forward").css("display","block");
        $(".left-button-forward").fadeIn(1000); 
-     }else if(lengthTel<5){
+     }else if(filter.test($('#tel').val())){
+      $('#tel').removeClass("erroR");
+      $('.tel-active').addClass('active');
+      }else{
       $('#tel').addClass("erroR");
      }
 });
@@ -587,6 +589,15 @@ $("#footer-big-button-3").hover(
 $(".uarr").click(function(){
   $(this).toggleClass("opened");
     $("nav").toggleClass("open");
+    $(".openmenu-mask").toggle();
+});
+
+$(".menu-textmenu").click(function(){
+  if($("nav").find("button").attr("class")=="opened tcon-transform"){
+      $("nav").find("button").toggleClass("opened tcon-transform");
+  }else{
+      $("nav").find("button").toggleClass("opened tcon-transform");
+  }
 });
 
 $(".item-discuss-text").click(function(){

@@ -39,7 +39,7 @@
 											<!-- Правая точка в конце линии -->
 											<circle class="knot arrow-knot" r="3" cx="50" cy="30" data-svg-origin="72 28"></circle>
 											<!-- Верхняя точка -->
-											<circle class="knot arrow-knot-2" r="3" cx="40" cy="17" data-svg-origin="30 9"></circle>
+											<circle class="knot arrow-knot-2" r="3" cx="40" cy="18" data-svg-origin="30 9"></circle>
 											<!-- Нижняя точка -->
 											<circle class="knot arrow-knot-3" r="3" cx="40" cy="43" data-svg-origin="30 45"></circle>
 											<!-- Верхняя линия -->
@@ -72,7 +72,7 @@
 											<!-- Правая точка в конце линии -->
 											<circle class="knot arrow-knot" r="3" cx="50" cy="30" data-svg-origin="72 28"></circle>
 											<!-- Верхняя точка -->
-											<circle class="knot arrow-knot-2" r="3" cx="40" cy="17" data-svg-origin="30 9"></circle>
+											<circle class="knot arrow-knot-2" r="3" cx="40" cy="18" data-svg-origin="30 9"></circle>
 											<!-- Нижняя точка -->
 											<circle class="knot arrow-knot-3" r="3" cx="40" cy="43" data-svg-origin="30 45"></circle>
 											<!-- Верхняя линия -->
@@ -106,7 +106,7 @@
 											<!-- Правая точка в конце линии -->
 											<circle class="knot arrow-knot" r="3" cx="50" cy="30" data-svg-origin="72 28"></circle>
 											<!-- Верхняя точка -->
-											<circle class="knot arrow-knot-2" r="3" cx="40" cy="17" data-svg-origin="30 9"></circle>
+											<circle class="knot arrow-knot-2" r="3" cx="40" cy="18" data-svg-origin="30 9"></circle>
 											<!-- Нижняя точка -->
 											<circle class="knot arrow-knot-3" r="3" cx="40" cy="43" data-svg-origin="30 45"></circle>
 											<!-- Верхняя линия -->
@@ -140,7 +140,7 @@
 											<!-- Правая точка в конце линии -->
 											<circle class="knot arrow-knot" r="3" cx="50" cy="30" data-svg-origin="72 28"></circle>
 											<!-- Верхняя точка -->
-											<circle class="knot arrow-knot-2" r="3" cx="40" cy="17" data-svg-origin="30 9"></circle>
+											<circle class="knot arrow-knot-2" r="3" cx="40" cy="18" data-svg-origin="30 9"></circle>
 											<!-- Нижняя точка -->
 											<circle class="knot arrow-knot-3" r="3" cx="40" cy="43" data-svg-origin="30 45"></circle>
 											<!-- Верхняя линия -->
@@ -174,7 +174,7 @@
 											<!-- Правая точка в конце линии -->
 											<circle class="knot arrow-knot" r="3" cx="50" cy="30" data-svg-origin="72 28"></circle>
 											<!-- Верхняя точка -->
-											<circle class="knot arrow-knot-2" r="3" cx="40" cy="17" data-svg-origin="30 9"></circle>
+											<circle class="knot arrow-knot-2" r="3" cx="40" cy="18" data-svg-origin="30 9"></circle>
 											<!-- Нижняя точка -->
 											<circle class="knot arrow-knot-3" r="3" cx="40" cy="43" data-svg-origin="30 45"></circle>
 											<!-- Верхняя линия -->
@@ -207,7 +207,7 @@
 											<!-- Правая точка в конце линии -->
 											<circle class="knot arrow-knot" r="3" cx="50" cy="30" data-svg-origin="72 28"></circle>
 											<!-- Верхняя точка -->
-											<circle class="knot arrow-knot-2" r="3" cx="40" cy="17" data-svg-origin="30 9"></circle>
+											<circle class="knot arrow-knot-2" r="3" cx="40" cy="18" data-svg-origin="30 9"></circle>
 											<!-- Нижняя точка -->
 											<circle class="knot arrow-knot-3" r="3" cx="40" cy="43" data-svg-origin="30 45"></circle>
 											<!-- Верхняя линия -->

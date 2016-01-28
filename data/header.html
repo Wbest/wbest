@@ -22,11 +22,11 @@
 
 </head>
 <body>
-
+	<div class="openmenu-mask"></div>	
 	<?if (str_replace("/", "", $_SERVER['REQUEST_URI']) == "") {?>
 	<div id="container" class="intro-effect-push">
 	<nav>
-
+		<span class="menu-textmenu uarr">меню</span>
 		    <button type="button" class="tcon tcon-menu--arrow tcon-menu--arrowup uarr" aria-label="toggle menu">
 				  <span class="tcon-menu__lines" aria-hidden="true"></span>
 				  <span class="tcon-visuallyhidden">toggle menu</span>
@@ -100,6 +100,7 @@
 		</div>
 		<? } else {?>
 		<nav>
+			<span class="menu-textmenu uarr">меню</span>
 		    <button type="button" class="tcon tcon-menu--arrow tcon-menu--arrowup uarr" aria-label="toggle menu">
 				  <span class="tcon-menu__lines" aria-hidden="true"></span>
 				  <span class="tcon-visuallyhidden">toggle menu</span>

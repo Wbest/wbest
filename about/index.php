@@ -1,5 +1,4 @@
 	<?
-
 	$title = "Разработка корпоративных сайтов в сферах производства, медицины, недвижимости";
 	$description = "";
 	$keywords = "";
@@ -13,7 +12,7 @@
 		<main class="page-about-us">
 			<section class="header-about-us">
 				<header>
-					<img src="#" alt="logo">
+					<img src="/dist/img/logo1.png" alt="logo">
 					<h1>Мы — молодое динамично<br> развивающееся digital-агентство </h1>
 				</header>
 				<p>
@@ -24,7 +23,7 @@
 
 				<section class="block-about-mission">
 					<header>
-						<img src="#" alt="logo">
+						<img src="/dist/img/about us 2.png" alt="logo">
 						<h2>
 						Наша миссия - развитие<br>
 						сверхспособностей в области IT
@@ -52,7 +51,7 @@
 
 										<div class="block-button">
 											<div class="group-button button-icon"><span class="icon-1"></span></div>
-											<a class="group-button button-discussion" href="#">Обсудить проект</a>
+											<span class="group-button button-discussion discuss-window">Обсудить проект</span>
 										</div>
 									<div class="line top-left"></div>
 									<div class="line left-top"></div>
@@ -79,7 +78,7 @@
 
 							<!-- Блок изображения специалиста -->
 							<li class="team-block team-block-photo-1">
-								<img alt="###" src="../dist/img/Леша.jpg"/>
+								<img alt="###" src="/dist/img/Леша.jpg"/>
 									<span class="team-block-mask mask-photo-1"></span>
 
 									<div class="team-block-text">
@@ -97,7 +96,7 @@
 
 							<!-- Блок изображения специалиста -->
 							<li class="team-block team-block-photo-2">		
-								<img alt="Дмитрий Чистяков" src="../dist/img/Дима.jpg"/>
+								<img alt="Дмитрий Чистяков" src="/dist/img/Дима.jpg"/>
 									<span class="team-block-mask mask-photo-2"></span>
 
 									<div class="team-block-text">
@@ -115,7 +114,7 @@
 
 							<!-- Блок изображения специалиста -->
 							<li class="team-block team-block-photo-3">
-								<img alt="Николай Байдаков" src="../dist/img/Коля.jpg">
+								<img alt="Николай Байдаков" src="/dist/img/Коля.jpg">
 									<span class="team-block-mask mask-photo-3"></span>
 
 									<div class="team-block-text">
@@ -133,7 +132,7 @@
 
 							<!-- Блок изображения специалиста -->
 							<li class="team-block team-block-photo-4">
-								<img alt="###" src="../dist/img/Катя.jpg"/>
+								<img alt="###" src="/dist/img/Катя.jpg"/>
 									<span class="team-block-mask mask-photo-4"></span>
 
 									<div class="team-block-text">
@@ -152,7 +151,7 @@
 
 							<!-- Блок изображения специалиста -->
 							<li class="team-block team-block-photo-5">
-								<img alt="###" src="../dist/img/Алексей.jpg"/>
+								<img alt="###" src="/dist/img/Алексей.jpg"/>
 									<span class="team-block-mask mask-photo-5"></span>
 
 									<div class="team-block-text">
@@ -170,7 +169,7 @@
 
 							<!-- Блок изображения специалиста -->
 							<li class="team-block team-block-photo-6">		
-								<img alt="Дмитрий Чистяков" src="../dist/img/Саша.jpg"/>
+								<img alt="Дмитрий Чистяков" src="/dist/img/Саша.jpg"/>
 									<span class="team-block-mask mask-photo-6"></span>
 
 									<div class="team-block-text">
@@ -188,7 +187,7 @@
 
 							<!-- Блок изображения специалиста -->
 							<li class="team-block team-block-photo-7">
-								<img alt="Николай Байдаков" src="../dist/img/Миша.jpg"/>
+								<img alt="Николай Байдаков" src="/dist/img/Миша.jpg"/>
 									<span class="team-block-mask mask-photo-7"></span>
 
 									<div class="team-block-text">
@@ -216,31 +215,31 @@
 						</header>
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/1.jpg">
+								<img src="/dist/img/1.png">
 							</div>	
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/2.jpg">
+								<img src="/dist/img/2.png">
 							</div>
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/3.jpg">
+								<img src="/dist/img/3.png">
 							</div>
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/4.jpg">
+								<img src="/dist/img/4.png">
 								</div>
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/5.jpg">
+								<img src="/dist/img/5.png">
 							</div>
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/6.jpg">
+								<img src="/dist/img/6.png">
 							</div>
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/7.jpg">
+								<img src="/dist/img/7.png">
 							</div>
 					</div>
 
@@ -255,15 +254,15 @@
 						</header>
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/8.jpg">
+								<img src="/dist/img/8.png">
 							</div>	
 
-							<div class="col-md-3 trust-company">
-								<img src="../dist/img/9.jpg">
+							<div class="col-md-3 trust-company regru">
+								<img src="/dist/img/9.png">
 							</div>
 
 							<div class="col-md-3 trust-company">
-								<img src="../dist/img/10.jpg">
+								<img src="/dist/img/10.png">
 							</div>
 
 					</div>
